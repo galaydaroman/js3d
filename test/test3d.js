@@ -34,8 +34,14 @@ function drawAxises() {
     $.each(a, function() { axis(this); });
 }
 
+function testScene() {
+    var sphere = new c3dl.Sphere(5);
+    scn.addObjectToScene(sphere);
+}
+
 function drawScene() {
     drawAxises();
+    //testScene();    
 }
 
 function canvasMain(canvasName) {
