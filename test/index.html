@@ -10,30 +10,57 @@
     <meta name="author" content="Galayda Roman" />
     
     <style type="text/css">
-        header, footer {
-            background: linear-background(top, #333 0%, #111 100%);
-            color: #ccc;
+        body, div, header, footer, p, span, ul, li, table, h1, h2, h3, h4, h5, h6 {
+            padding: 0;
+            margin: 0;
+        }
+        body {
+            width: 1000px;
+            margin: 0 auto;
             font-family: Tahoma;
+        }
+        header, footer {
+            background: -webkit-linear-gradient(top, #555 0%, #111 100%);
+            color: #ccc;
+            padding: 10px 20px;
+        }
+        header h1 {
+            padding-top: 30px;
+        }
+        footer h4 {
+            padding-top: 30px;
+            font-weight: normal;
+            display: inline-block;
+        }
+        footer {
+            font-size: 12px;
+        }
+        .body_wrapper {
+            background: url(images/diagonal_thick.png) repeat transparent;
+        }
+        .container_3d {
+            margin: 10px 40px;
         }
     </style>
     
-    <script type="text/javascript" src="../c3dl/c3dapi.js"></script>
+    <script type="text/javascript" src="jquery/jquery.js"></script> <!-- JQuery version 1.7.1 -->
+    <script type="text/javascript" src="c3dl/c3dlapi.js"></script>
     <script type="text/javascript" src="test3d.js"></script>
   </head>
   <body>
-    <div>
+    <div class="body_wrapper">  
       <header>
-        <h1>index</h1>
+        <h1>Testing 3D graphics</h1>
       </header>
 
 
       <div class="container_3d">
-        <canvas id="test" width="700" height="500"></canvas>
+        <canvas id="test" width="700" height="400"></canvas>
       </div>
 
 
       <footer>
-        <p>&copy; Copyright  by Galayda Roman</p>
+        &copy;&nbsp;<h4> Copyright  by Galayda Roman</h4>
       </footer>
     </div>
   </body>

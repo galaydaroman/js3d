@@ -1,7 +1,10 @@
-
+/*
 var scripts=document.getElementsByTagName("script");var parts=scripts[scripts.length-1].src.split("/");parts.pop();var basePath=parts.join("/");var head=document.getElementsByTagName("head")[0];c3dl_require=function(path)
 {document.write('<'+'script');document.write(' language="javascript"');document.write(' type="text/javascript"');document.write(' src="'+basePath+"/"+path+'">');document.write('</'+'script'+'>');}
-c3dl_require('c3dlnamespace.js');c3dl_require('constants.js');c3dl_require('effects/effect_docs.js');c3dl_require('debug.js');c3dl_require('renderer/renderer.js');c3dl_require('renderer/rendererwebgl.js');c3dl_require('renderer/programobject.js');c3dl_require('math/mjs.js');c3dl_require('math/mathutils.js');c3dl_require('math/vector.js');c3dl_require('math/matrix.js');c3dl_require('math/quaternion.js');c3dl_require('matrixstack.js');c3dl_require('camera/camera.js');c3dl_require('camera/freecamera.js');c3dl_require('camera/orbitcamera.js');c3dl_require('enclosure/boundingsphere.js');c3dl_require('enclosure/visualboundingsphere.js');c3dl_require('enclosure/boundingbox.js');c3dl_require('actors/actor.js');c3dl_require('actors/primitive.js');c3dl_require('actors/point.js');c3dl_require('actors/line.js');c3dl_require('frustum_culling/frustum.js');c3dl_require('frustum_culling/plane.js');c3dl_require('scene.js');c3dl_require('texture/texture.js');c3dl_require('texture/texturemanager.js');c3dl_require('texture/textureutils.js');c3dl_require('collada/colladamanager.js');c3dl_require('collada/colladaloader.js');c3dl_require('collada/colladaqueue.js');c3dl_require('collada/geometry.js');c3dl_require('collada/primitiveset.js');c3dl_require('light/light.js');c3dl_require('light/positionallight.js');c3dl_require('light/directionallight.js');c3dl_require('light/spotlight.js');c3dl_require('material.js');c3dl_require('collada/collada.js');c3dl_require('scenegraph/scenenode.js');c3dl_require('utilities/utilities.js');c3dl_require('shaders/model/light/light_vs.js');c3dl_require('shaders/model/material/material.js');c3dl_require('shaders/model/standard/model_fs.js');c3dl_require('shaders/model/standard/model_vs.js');c3dl_require('shaders/model/standard/std_callback.js');c3dl_require('shaders/particle_system/psys_vs.js');c3dl_require('shaders/particle_system/psys_fs.js');c3dl_require('shaders/point/point/point_vs.js');c3dl_require('shaders/point/point/point_fs.js');c3dl_require('shaders/point/sphere/point_sphere_vs.js');c3dl_require('shaders/point/sphere/point_sphere_fs.js');c3dl_require('shaders/line/line_vs.js');c3dl_require('shaders/line/line_fs.js');c3dl_require('shaders/bounding_sphere/bounding_sphere_vs.js');c3dl_require('shaders/bounding_sphere/bounding_sphere_fs.js');c3dl_require('shaders/model/greyscale/greyscale_vs.js');c3dl_require('shaders/model/greyscale/greyscale_fs.js');c3dl_require('shaders/model/greyscale/greyscale_callback.js');c3dl_require('shaders/model/sepia/sepia_vs.js');c3dl_require('shaders/model/sepia/sepia_fs.js');c3dl_require('shaders/model/sepia/sepia_callback.js');c3dl_require('shaders/model/cartoon/cartoon_vs.js');c3dl_require('shaders/model/cartoon/cartoon_fs.js');c3dl_require('shaders/model/cartoon/cartoon_callback.js');c3dl_require('shaders/model/gooch/gooch_vs.js');c3dl_require('shaders/model/gooch/gooch_fs.js');c3dl_require('shaders/model/gooch/gooch_callback.js');c3dl_require('shaders/model/solid_color/solid_color_vs.js');c3dl_require('shaders/model/solid_color/solid_color_fs.js');c3dl_require('shaders/model/solid_color/solid_color_callback.js');c3dl_require('effects/effecttemplate.js');c3dl_require('effects/effect.js');c3dl_require('particle_system/particlesystem.js');c3dl_require('particle_system/particle.js');c3dl_require('init.js');c3dl_require('interaction/picking.js');c3dl_require('interaction/pickingresult.js');var c3dl={rendererID:0,getNextRendererID:function()
+c3dl_require('c3dlnamespace.js');c3dl_require('constants.js');c3dl_require('effects/effect_docs.js');c3dl_require('debug.js');c3dl_require('renderer/renderer.js');c3dl_require('renderer/rendererwebgl.js');c3dl_require('renderer/programobject.js');c3dl_require('math/mjs.js');c3dl_require('math/mathutils.js');c3dl_require('math/vector.js');c3dl_require('math/matrix.js');c3dl_require('math/quaternion.js');c3dl_require('matrixstack.js');c3dl_require('camera/camera.js');c3dl_require('camera/freecamera.js');c3dl_require('camera/orbitcamera.js');c3dl_require('enclosure/boundingsphere.js');c3dl_require('enclosure/visualboundingsphere.js');c3dl_require('enclosure/boundingbox.js');c3dl_require('actors/actor.js');c3dl_require('actors/primitive.js');c3dl_require('actors/point.js');c3dl_require('actors/line.js');c3dl_require('frustum_culling/frustum.js');c3dl_require('frustum_culling/plane.js');c3dl_require('scene.js');c3dl_require('texture/texture.js');c3dl_require('texture/texturemanager.js');c3dl_require('texture/textureutils.js');c3dl_require('collada/colladamanager.js');c3dl_require('collada/colladaloader.js');c3dl_require('collada/colladaqueue.js');c3dl_require('collada/geometry.js');c3dl_require('collada/primitiveset.js');c3dl_require('light/light.js');c3dl_require('light/positionallight.js');c3dl_require('light/directionallight.js');c3dl_require('light/spotlight.js');c3dl_require('material.js');c3dl_require('collada/collada.js');c3dl_require('scenegraph/scenenode.js');c3dl_require('utilities/utilities.js');c3dl_require('shaders/model/light/light_vs.js');c3dl_require('shaders/model/material/material.js');c3dl_require('shaders/model/standard/model_fs.js');c3dl_require('shaders/model/standard/model_vs.js');c3dl_require('shaders/model/standard/std_callback.js');c3dl_require('shaders/particle_system/psys_vs.js');c3dl_require('shaders/particle_system/psys_fs.js');c3dl_require('shaders/point/point/point_vs.js');c3dl_require('shaders/point/point/point_fs.js');c3dl_require('shaders/point/sphere/point_sphere_vs.js');c3dl_require('shaders/point/sphere/point_sphere_fs.js');c3dl_require('shaders/line/line_vs.js');c3dl_require('shaders/line/line_fs.js');c3dl_require('shaders/bounding_sphere/bounding_sphere_vs.js');c3dl_require('shaders/bounding_sphere/bounding_sphere_fs.js');c3dl_require('shaders/model/greyscale/greyscale_vs.js');c3dl_require('shaders/model/greyscale/greyscale_fs.js');c3dl_require('shaders/model/greyscale/greyscale_callback.js');c3dl_require('shaders/model/sepia/sepia_vs.js');c3dl_require('shaders/model/sepia/sepia_fs.js');c3dl_require('shaders/model/sepia/sepia_callback.js');c3dl_require('shaders/model/cartoon/cartoon_vs.js');c3dl_require('shaders/model/cartoon/cartoon_fs.js');c3dl_require('shaders/model/cartoon/cartoon_callback.js');c3dl_require('shaders/model/gooch/gooch_vs.js');c3dl_require('shaders/model/gooch/gooch_fs.js');c3dl_require('shaders/model/gooch/gooch_callback.js');c3dl_require('shaders/model/solid_color/solid_color_vs.js');c3dl_require('shaders/model/solid_color/solid_color_fs.js');c3dl_require('shaders/model/solid_color/solid_color_callback.js');c3dl_require('effects/effecttemplate.js');c3dl_require('effects/effect.js');c3dl_require('particle_system/particlesystem.js');c3dl_require('particle_system/particle.js');c3dl_require('init.js');c3dl_require('interaction/picking.js');c3dl_require('interaction/pickingresult.js');
+*/
+var c3dl={rendererID:0,
+getNextRendererID:function()
 {return++c3dl.rendererID;},bind:function(func,bindObj)
 {return function()
 {func.call(bindObj,arguments);};},extend:function(baseObj,extObj)
@@ -12,6 +15,18 @@ return baseObj;},guid:function()
 {if(funcname.length==0)funcname=args.callee.name;var tmpparent=o.__parent;if(o.__parent.prototype.__parent)o.__parent=o.__parent.prototype.__parent;var ret=tmpparent.prototype[funcname].apply(o,args);delete o.__parent;return ret;},_superc:function(o)
 {var tmpparent=o.__parent;if(o.__parent.prototype.__parent){o.__parent=o.__parent.prototype.__parent;}
 tmpparent.prototype.constructor.apply(o);delete o.__parent;},};c3dl.TOLERANCE=0.00001;c3dl.POINT_MODE_POINT=1;c3dl.POINT_MODE_SPHERE=2;c3dl.DEFAULT_NEAR_CLIPPING_PLANE=0.1;c3dl.DEFAULT_FAR_CLIPPING_PLANE=8000.0;c3dl.DEFAULT_FIELD_OF_VIEW=45.0;c3dl.GLES_CONTEXT_20=2.0;c3dl.MAX_LIGHTS=7;c3dl.ABSTRACT_LIGHT=0;c3dl.DIRECTIONAL_LIGHT=1;c3dl.POSITIONAL_LIGHT=2;c3dl.SPOT_LIGHT=3;c3dl.PROJECTION=1;c3dl.MODELVIEW=2;c3dl.COLLADA=0;c3dl.LINE=1;c3dl.POINT=2;c3dl.PARTICLE_SYSTEM=3;c3dl.DEFAULT_BG_RED=0.4;c3dl.DEFAULT_BG_GREEN=0.4;c3dl.DEFAULT_BG_BLUE=0.6;c3dl.ZERO=0;c3dl.ONE=1;c3dl.SRC_COLOR=0x0300;c3dl.ONE_MINUS_SRC_COLOR=0x0301;c3dl.SRC_ALPHA=0x0302;c3dl.ONE_MINUS_SRC_ALPHA=0x0303;c3dl.DST_ALPHA=0x0304;c3dl.ONE_MINUS_DST_ALPHA=0x0305;c3dl.DST_COLOR=0x0306;c3dl.ONE_MINUS_DST_COLOR=0x0307;c3dl.SRC_ALPHA_SATURATE=0x0308;c3dl.FUNC_ADD=0x8006;c3dl.FUNC_SUBTRACT=0x800A;c3dl.FUNC_REVERSE_SUBTRACT=0x800B;c3dl.SHADER_VAR_NOT_FOUND=-1;c3dl.VERTEX_SHADER="x-vertex";c3dl.FRAGMENT_SHADER="x-fragment";c3dl.WIRE_FRAME=0x0001;c3dl.FILL=0x0004;c3dl.DEBUG_INFO="Info";c3dl.DEBUG_ERROR="Error";c3dl.DEBUG_WARNING="Warning";c3dl.DEBUG_EXCEPTION="Exception";c3dl.PICK_PRECISION_BOUNDING_VOLUME=1;c3dl.PICK_PRECISION_TRIANGLE=2;try{Float32Array;}catch(ex){Uint8Array=WebGLUnsignedByteArray;Float32Array=WebGLFloatArray;}
+
+/**
+ * Roma: fixes
+ */
+try{WebGLFloatArray;}catch(x){WebGLFloatArray=Float32Array;}
+const MJS_FLOAT_ARRAY_TYPE=WebGLFloatArray;
+c3dl.makeIdentityMatrix=function()
+{return new MJS_FLOAT_ARRAY_TYPE([1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0]);}
+c3dl.makeZeroMatrix=function()
+{return new C3DL_FLOAT_ARRAY([0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0]);}
+/** ========= */
+
 const C3DL_FLOAT_ARRAY=Float32Array;const C3DL_UINT_ARRAY=Uint8Array;c3dl.debug={BENCHMARK:false,DUMMY:false,DUMP:false,SHARK:false,isVisible:true,numLinesLogged:0,maxLinesToLog:100,isSetUp:false,logDiv:null,isFirebugEnabled:false,getVisible:function()
 {return c3dl.debug.isVisible;},setup:function()
 {windowWidth=document.body.clientWidth-50;windowHeight=document.body.clientHeight;logWindowWidth=windowWidth;logWindowHeight=200;c3dl.debug.logDiv=document.createElement("div");c3dl.debug.logDiv.style.width=logWindowWidth+"px";c3dl.debug.logDiv.style.position='absolute';c3dl.debug.logDiv.style.top=windowHeight-logWindowHeight;c3dl.debug.logDiv.style.left=5;c3dl.debug.logDiv.style.padding=5;c3dl.debug.logDiv.style.opacity=.8;c3dl.debug.logDiv.style.border='1px solid #000';c3dl.debug.logDiv.id='logdiv';c3dl.debug.logDiv.name='logdiv';document.body.appendChild(c3dl.debug.logDiv);try
@@ -1214,7 +1229,9 @@ c3dl.DirectionalLight=function()
 {return c3dl.copyVector(this.direction);}
 this.setDirection=function(dir)
 {this.direction=c3dl.normalizeVector(dir);}}
-c3dl.DirectionalLight.prototype=new c3dl.Light;c3dl.Light=function()
+c3dl.makeVector=function(newX,newY,newZ)
+{return new C3DL_FLOAT_ARRAY([!isNaN(newX)?parseFloat(newX):0.0,!isNaN(newY)?parseFloat(newY):0.0,!isNaN(newZ)?parseFloat(newZ):0.0]);}
+c3dl.Light=function()
 {this.type=c3dl.ABSTRACT_LIGHT;this.name="unnamed";this.ambient=c3dl.makeVector(0,0,0);this.diffuse=c3dl.makeVector(0,0,0);this.specular=c3dl.makeVector(0,0,0);this.on=false;this.getName=function()
 {return this.name;}
 this.getAmbient=function()
@@ -1237,6 +1254,7 @@ this.setDiffuse=function(color)
 {this.diffuse[0]=color[0];this.diffuse[1]=color[1];this.diffuse[2]=color[2];}
 this.setSpecular=function(color)
 {this.specular[0]=color[0];this.specular[1]=color[1];this.specular[2]=color[2];}}
+c3dl.DirectionalLight.prototype=new c3dl.Light;
 c3dl.PositionalLight=function()
 {this.position=c3dl.makeVector(0,0,0);this.attenuation=c3dl.makeVector(1,0,0);this.type=c3dl.POSITIONAL_LIGHT;this.getAttenuation=function()
 {return c3dl.copyVector(this.attenuation);}
@@ -1294,10 +1312,6 @@ return min;};c3dl.isValidMatrix=function(mat)
 {if(isNaN(mat[i]))return false;}
 return true;}}
 return false;}
-c3dl.makeIdentityMatrix=function()
-{return new MJS_FLOAT_ARRAY_TYPE([1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0]);}
-c3dl.makeZeroMatrix=function()
-{return new C3DL_FLOAT_ARRAY([0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0]);}
 c3dl.setMatrix=function(mat,e00,e01,e02,e03,e10,e11,e12,e13,e20,e21,e22,e23,e30,e31,e32,e33)
 {mat[0]=e00;mat[1]=e01;mat[2]=e02;mat[3]=e03;mat[4]=e10;mat[5]=e11;mat[6]=e12;mat[7]=e13;mat[8]=e20;mat[9]=e21;mat[10]=e22;mat[11]=e23;mat[12]=e30;mat[13]=e31;mat[14]=e32;mat[15]=e33;}
 c3dl.makeMatrix=function(e00,e01,e02,e03,e10,e11,e12,e13,e20,e21,e22,e23,e30,e31,e32,e33)
@@ -1352,8 +1366,8 @@ c3dl.subtractMatrices=function(matOne,matTwo)
 return m;}
 c3dl.copyMatrix=function(srcMat)
 {return M4x4.clone(srcMat);}
-const MJS_VERSION=0x000000;const MJS_DO_ASSERT=true;try{WebGLFloatArray;}catch(x){WebGLFloatArray=Float32Array;}
-const MJS_FLOAT_ARRAY_TYPE=WebGLFloatArray;if(MJS_DO_ASSERT){function MathUtils_assert(cond,msg){if(!cond)throw"Assertion failed: "+msg;}}else{function MathUtils_assert(){}}
+const MJS_VERSION=0x000000;const MJS_DO_ASSERT=true;
+if(MJS_DO_ASSERT){function MathUtils_assert(cond,msg){if(!cond)throw"Assertion failed: "+msg;}}else{function MathUtils_assert(){}}
 var V3={};V3._temp1=new MJS_FLOAT_ARRAY_TYPE(3);V3._temp2=new MJS_FLOAT_ARRAY_TYPE(3);V3._temp3=new MJS_FLOAT_ARRAY_TYPE(3);if(MJS_FLOAT_ARRAY_TYPE==Array){V3.x=[1.0,0.0,0.0];V3.y=[0.0,1.0,0.0];V3.z=[0.0,0.0,1.0];V3.$=function V3_$(x,y,z){return[x,y,z];};V3.clone=function V3_clone(a){return[a[0],a[1],a[2]];};}else{V3.x=new MJS_FLOAT_ARRAY_TYPE([1.0,0.0,0.0]);V3.y=new MJS_FLOAT_ARRAY_TYPE([0.0,1.0,0.0]);V3.z=new MJS_FLOAT_ARRAY_TYPE([0.0,0.0,1.0]);V3.$=function V3_$(x,y,z){return new MJS_FLOAT_ARRAY_TYPE([x,y,z]);};V3.clone=function V3_clone(a){return new MJS_FLOAT_ARRAY_TYPE(a);};}
 V3.u=V3.x;V3.v=V3.y;V3.add=function V3_add(a,b,r){if(r==undefined)r=new MJS_FLOAT_ARRAY_TYPE(3);r[0]=a[0]+b[0];r[1]=a[1]+b[1];r[2]=a[2]+b[2];return r;};V3.sub=function V3_sub(a,b,r){if(r==undefined)r=new MJS_FLOAT_ARRAY_TYPE(3);r[0]=a[0]-b[0];r[1]=a[1]-b[1];r[2]=a[2]-b[2];return r;};V3.neg=function V3_neg(a,r){if(r==undefined)r=new MJS_FLOAT_ARRAY_TYPE(3);r[0]=-a[0];r[1]=-a[1];r[2]=-a[2];return r;};V3.direction=function V3_direction(a,b,r){if(r==undefined)r=new MJS_FLOAT_ARRAY_TYPE(3);return V3.normalize(V3.sub(a,b,r),r);};V3.length=function V3_length(a){var temp=Math.sqrt(a[0]*a[0]+a[1]*a[1]+a[2]*a[2]);return temp;};V3.lengthSquared=function V3_lengthSquared(a){return a[0]*a[0]+a[1]*a[1]+a[2]*a[2];};V3.normalize=function V3_normalize(a,r){if(r==undefined)r=new MJS_FLOAT_ARRAY_TYPE(3);var im=1.0/V3.length(a);r[0]=a[0]*im;r[1]=a[1]*im;r[2]=a[2]*im;return r;};V3.scale=function V3_scale(a,k,r){if(r==undefined)r=new MJS_FLOAT_ARRAY_TYPE(3);r[0]=a[0]*k;r[1]=a[1]*k;r[2]=a[2]*k;return r;}
 V3.dot=function V3_dot(a,b){return a[0]*b[0]+a[1]*b[1]+a[2]*b[2];};V3.cross=function V3_cross(a,b,r){if(r==undefined)r=new MJS_FLOAT_ARRAY_TYPE(3);r[0]=a[1]*b[2]-a[2]*b[1];r[1]=a[2]*b[0]-a[0]*b[2];r[2]=a[0]*b[1]-a[1]*b[0];return r;};var M4x4={};M4x4._temp1=new MJS_FLOAT_ARRAY_TYPE(16);M4x4._temp2=new MJS_FLOAT_ARRAY_TYPE(16);if(MJS_FLOAT_ARRAY_TYPE==Array){M4x4.I=[1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0];M4x4.$=function M4x4_$(m00,m01,m02,m03,m04,m05,m06,m07,m08,m09,m10,m11,m12,m13,m14,m15){return[m00,m01,m02,m03,m04,m05,m06,m07,m08,m09,m10,m11,m12,m13,m14,m15];};M4x4.clone=function M4x4_clone(m){return new[m[0],m[1],m[2],m[3],m[4],m[5],m[6],m[7],m[8],m[9],m[10],m[11]];};}else{M4x4.I=new MJS_FLOAT_ARRAY_TYPE([1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0]);M4x4.$=function M4x4_$(m00,m01,m02,m03,m04,m05,m06,m07,m08,m09,m10,m11,m12,m13,m14,m15){return new MJS_FLOAT_ARRAY_TYPE([m00,m01,m02,m03,m04,m05,m06,m07,m08,m09,m10,m11,m12,m13,m14,m15]);};M4x4.clone=function M4x4_clone(m){return new MJS_FLOAT_ARRAY_TYPE(m);};}
@@ -1439,8 +1453,7 @@ newVec[1]=srcVec[1]
 newVec[2]=srcVec[2]
 newVec[3]=newComponent
 return newVec;}
-c3dl.makeVector=function(newX,newY,newZ)
-{return new C3DL_FLOAT_ARRAY([!isNaN(newX)?parseFloat(newX):0.0,!isNaN(newY)?parseFloat(newY):0.0,!isNaN(newZ)?parseFloat(newZ):0.0]);}
+
 c3dl.normalizeVector=function(vec)
 {if(vec.length===4){var compr=vec[0]*vec[0]+vec[1]*vec[1]+vec[2]*vec[2];var ln=Math.sqrt(compr);vec[0]=vec[0]!=0.0?vec[0]/ln:0.0;vec[1]=vec[1]!=0.0?vec[1]/ln:0.0;vec[2]=vec[2]!=0.0?vec[2]/ln:0.0;vec[3]=vec[3]!=0.0?vec[2]/ln:0.0;return new C3DL_FLOAT_ARRAY(vec);}
 else{var compr=vec[0]*vec[0]+vec[1]*vec[1]+vec[2]*vec[2];var ln=Math.sqrt(compr);vec[0]=vec[0]!=0.0?vec[0]/ln:0.0;vec[1]=vec[1]!=0.0?vec[1]/ln:0.0;vec[2]=vec[2]!=0.0?vec[2]/ln:0.0;return new C3DL_FLOAT_ARRAY(vec);}}
